@@ -1,0 +1,35 @@
+M92 X99.8500 ; steps per mm
+M92 Y99.8500
+M92 Z400.00
+M92 E95.00
+M203 X400.00 ; max feedrate
+M203 Y400.00
+M203 Z8.00
+M203 E50.00
+M201 X700.00 ; max acceleration
+M201 Y700.00
+M201 Z50.00
+M201 E5000.00
+M204 P650.00 ; starting acceleration
+M204 R1000.00
+M205 S0.00 ; minimum feedrate for print
+M205 B20000.00 ; Minimum segment time
+M205 X7.00 ; x jerk
+M205 Y7.00 ; y jerk
+M205 Z0.30 ; z jerk
+M205 E5.00 ; extruder jerk
+M206 X44.00 ; home offset
+M206 Y25.00
+M206 Z16.60
+M145 S0 H195 ; meterial preset 1
+M145 S0 B40
+M145 S0 F0
+M145 S1 H210 ; meterial preset 2
+M145 S1 B70
+M145 S1 F0
+M301 P23.86 ; hotend PID
+M301 I2.86
+M301 D49.84
+M304 P123.21 ; bed PID
+M304 I54.74
+M304 D69.34

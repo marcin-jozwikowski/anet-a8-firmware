@@ -1,7 +1,7 @@
 {
     "editMode": 1,
     "processor": 0,
-    "baudrate": 115200,
+    "baudrate": 57600,
     "bluetoothSerial": -1,
     "bluetoothBaudrate": 115200,
     "xStepsPerMM": 99.85,
@@ -533,7 +533,7 @@
             "maxDistance": 20
         }
     ],
-    "manualConfig": "",
+    "manualConfig": "#undef MOVE_CACHE_SIZE\n#undef MOVE_CACHE_LOW\n#undef PRINTLINE_CACHE_SIZE\n#undef LOW_TICKS_PER_MOVE\n\n#define MOVE_CACHE_SIZE 64\n#define MOVE_CACHE_LOW 15\n#define PRINTLINE_CACHE_SIZE 32\n#define LOW_TICKS_PER_MOVE 250000",
     "zHomeMinTemperature": 0,
     "zHomeXPos": 999999,
     "zHomeYPos": 999999,

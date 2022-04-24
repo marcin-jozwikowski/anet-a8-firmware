@@ -441,7 +441,7 @@ It also can add a delay to wait for spindle to run on full speed.
 
 // ################# Misc. settings ##################
 
-#define BAUDRATE 115200
+#define BAUDRATE 57600
 #define ENABLE_POWER_ON_STARTUP 1
 #define POWER_INVERTING 0
 #define AUTOMATIC_POWERUP 0
@@ -595,7 +595,15 @@ Values must be in range 1..255
 
 #define NUM_MOTOR_DRIVERS 0
 
+#undef MOVE_CACHE_SIZE
+#undef MOVE_CACHE_LOW
+#undef PRINTLINE_CACHE_SIZE
+#undef LOW_TICKS_PER_MOVE
 
+#define MOVE_CACHE_SIZE 64
+#define MOVE_CACHE_LOW 15
+#define PRINTLINE_CACHE_SIZE 32
+#define LOW_TICKS_PER_MOVE 250000
 
 #endif
 
@@ -605,7 +613,7 @@ Values must be in range 1..255
 {
     "editMode": 1,
     "processor": 0,
-    "baudrate": 115200,
+    "baudrate": 57600,
     "bluetoothSerial": -1,
     "bluetoothBaudrate": 115200,
     "xStepsPerMM": 99.85,
@@ -1137,7 +1145,7 @@ Values must be in range 1..255
             "maxDistance": 20
         }
     ],
-    "manualConfig": "",
+    "manualConfig": "#undef MOVE_CACHE_SIZE\n#undef MOVE_CACHE_LOW\n#undef PRINTLINE_CACHE_SIZE\n#undef LOW_TICKS_PER_MOVE\n\n#define MOVE_CACHE_SIZE 64\n#define MOVE_CACHE_LOW 15\n#define PRINTLINE_CACHE_SIZE 32\n#define LOW_TICKS_PER_MOVE 250000",
     "zHomeMinTemperature": 0,
     "zHomeXPos": 999999,
     "zHomeYPos": 999999,
